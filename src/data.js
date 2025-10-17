@@ -44,8 +44,6 @@ export function initData() {
     // если прошлый квери не был ранее установлен или поменялись параметры, то запрашиваем данные с сервера
     const response = await fetch(`${BASE_URL}/records?${nextQuery}`);
     const records = await response.json();
-    console.log("records:", records);
-    console.log("records.items:", records.items);
 
     lastQuery = nextQuery; // сохраняем для следующих запросов
     lastResult = {
